@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/fonts.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <title>TripAdvisor</title>
+  </head>
+  <body>
+    <div class="container-body">
+      <header>
+        <div>
+          <img src="./assets/icons/bars-solid.svg" alt="bars" />
+        </div>
+        <div id="logo-input">
+          <img
+            src="./assets/img/Tripadvisor_lockup_horizontal_secondary_registered.svg"
+            alt="logo-tripadvisor"
+            id="logo-tripadvisor"
+          />
+          <input type="text" id="search" />
+        </div>
+        <div id="nav-log">
+          <div>
+            <img
+              src="./assets/icons/plus-circle-solid.svg"
+              alt="publier"
+            /><span>Publier</span>
+          </div>
+          <div>
+            <img src="./assets/icons/bell-regular.svg" alt="alertes" /><span
+              >Alertes</span
+            >
+          </div>
+          <div>
+            <img src="./assets/icons/heart-regular.svg" alt="voyages" /><span
+              >Voyages</span
+            >
+          </div>
+          <div>
+            <button id="login">Connectez-vous</button>
+          </div>
+        </div>
+        <div class="hidden_768">
+          <img src="./assets/icons/search-solid.svg" alt="search_icon" />
+        </div>
+      </header>
+      <main>
+        <section id="section1">
+          <h1><span>Explorez</span> Montpellier</h1>
+          <nav>
+            <div>
+              Hôtels <img src="./assets/icons/bed-solid.svg" alt="hotels" />
+            </div>
+            <div>
+              Locations de vacances
+              <img src="./assets/icons/home-solid.svg" alt="locations" />
+            </div>
+            <div>
+              Activités
+              <img src="./assets/icons/hiking-solid.svg" alt="activites" />
+            </div>
+            <div>
+              Restaurants
+              <img src="./assets/icons/utensils-solid.svg" alt="restaurants" />
+            </div>
+            <div>
+              Forums de voyage
+              <img src="./assets/icons/comment-alt-solid.svg" alt="forums" />
+            </div>
+            <div>
+              Vols
+              <img src="./assets/icons/plane-departure-solid.svg" alt="vols" />
+            </div>
+            <div>
+              Plus
+              <img src="./assets/icons/ellipsis-h-solid.svg" alt="plus" />
+            </div>
+            <div class="hidden">
+              Test
+              <img src="./assets/icons/ellipsis-h-solid.svg" alt="plus" />
+            </div>
+          </nav>
+          <div id="pictures">
+            <div>
+              <img src="./assets/img/when-you-take-at-the.jpg" alt="paysage" />
+              <div id="flex">Toutes les photos</div>
+            </div>
+            <div>
+              <img
+                src="./assets/img/planet-ocean-montpellier.jpg"
+                alt="planetocean"
+              /><img src="./assets/img/musee-fabre.jpg" alt="museefabre" />
+            </div>
+          </div>
+          <div id="liens">
+            <div>
+              <a href="">Europe</a> > <a href="">France</a> >
+              <a href="">Occitanie</a> > <a href="">Hérault</a> >
+              <a href="">Montpellier</a>
+            </div>
+            <div>Visiter : Montpellier</div>
+          </div>
+        </section>
+        <section id="section2">
+          <div>
+            <h2>Informations sur Montpellier</h2>
+            <p>
+              Tomber malade en vacances c’est la guigne, mais si cela doit vous
+              arriver, choisissez Montpellier. On y étudiait déjà la médecine
+              avant le Moyen-âge : dès le IXe siècle les Maures y établirent des
+              écoles de médecine et la Faculté de médecine de Montpellier existe
+              depuis 1220. Quand le médecin vous aura remis sur pied, rattrapez
+              le temps perdu en visitant toute la ville, la cathédrale, les
+              belles demeures et l’opéra.
+            </p>
+          </div>
+          <div>
+            <div>
+              <h3>Commencez à organisez Montpellier</h3>
+              <p>
+                Créez un voyage pour enregistrer et organiser toutes vos idées
+                et les visualiser sur une carte.
+              </p>
+              <button>Créez un voyage</button>
+            </div>
+            <div>
+              <img
+                src="./assets/img/image_trips_card_medium.png"
+                alt="geolocalisation"
+              />
+            </div>
+          </div>
+        </section>
+        <section id="section3">
+          <div>
+            <div class="line"></div>
+            <h2>Destinations</h2>
+            <div class="line"></div>
+          </div>
+          <div id="destinations">
+            <div>
+              <img src="./assets/img/ponton.jpg" alt="lattes" />
+              <div class="like">
+                <img src="./assets/icons/heart-regular.svg" alt="like" />
+              </div>
+              <h4>Lattes, France</h4>
+            </div>
+            <div>
+              <img src="./assets/img/aqueduct-de-castries.jpg" alt="castries" />
+              <div class="like">
+                <img src="./assets/icons/heart-regular.svg" alt="like" />
+              </div>
+              <h4>Castries, France</h4>
+            </div>
+            <div>
+              <img
+                src="./assets/img/vue-du-terrain-de-football.jpg"
+                alt="castelnau"
+              />
+              <div class="like">
+                <img src="./assets/icons/heart-regular.svg" alt="like" />
+              </div>
+              <h4>Castenau-le-Lez, France</h4>
+            </div>
+            <div>
+              <img
+                src="./assets/img/facade-du-chateau-blog.jpg"
+                alt="laverune"
+              />
+              <div class="like">
+                <img src="./assets/icons/heart-regular.svg" alt="like" />
+              </div>
+              <h4>Laverune, France</h4>
+            </div>
+            <div>
+              <img src="./assets/img/sjvd.jpeg" alt="sjdv" />
+              <div class="like">
+                <img src="./assets/icons/heart-regular.svg" alt="like" />
+              </div>
+              <h4>Saint-Jeans-de-Védas, France</h4>
+            </div>
+            <div>
+              <img src="./assets/img/carnon.jpeg" alt="carnon" />
+              <div class="like">
+                <img src="./assets/icons/heart-regular.svg" alt="like" />
+              </div>
+              <h4>Carnon, France</h4>
+            </div>
+            <div>
+              <img src="./assets/img/grabels.jpeg" alt="grabels" />
+              <div class="like">
+                <img src="./assets/icons/heart-regular.svg" alt="like" />
+              </div>
+              <h4>Grabels, France</h4>
+            </div>
+            <div>
+              <img src="./assets/img/th.jpeg" alt="sbdp" />
+              <div class="like">
+                <img src="./assets/icons/heart-regular.svg" alt="like" />
+              </div>
+              <h4>Saint-Bauzille-de-Putois</h4>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <footer>
+      <div class="container-body">
+        <div>
+          <div>
+            <div id="logo-hibou">
+              <img
+                src="./assets/img/Tripadvisor_logoset_solid_green.svg"
+                alt="logo-hibou"
+                id="hibou"
+              />
+            </div>
+            <div id="credits">
+              <div>© 2020 TripAdvisor LLC Tous droits réservés.</div>
+              <div>
+                <a href="">Conditions d'utilisation</a>
+                <a href="">Confidentialité et utilisation des cookies</a>
+                <a href="">Accord d'utilisation des cookies</a>
+                <a href="">Plan du site</a>
+                <a href="">Fonctionnement du site</a>
+              </div>
+            </div>
+          </div>
+          <div>
+            Cette version de notre site internet s'adresse aux personnes parlant
+            français en France. Si vous habitez un autre pays ou une autre
+            région, merci de choisir la version de Tripadvisor appropriée pour
+            votre pays ou région dans le menu déroulant. plus
+          </div>
+        </div>
+        <div>
+          <select name="currency" id="currency">
+            <option value="EUR">EUR</option>
+          </select>
+          <select name="country" id="country">
+            <option value="France">France</option>
+          </select>
+        </div>
+      </div>
+    </footer>
+    <div class="modal">
+      <div class="modal-content">
+        <div class="close-modal">
+          <img src="./assets/icons/times-solid.svg" alt="cross" id="cross" />
+        </div>
+        <form class="register-form">
+          <h1>Formulaire d'inscription</h1>
+          <input
+            type="text"
+            name="firstName"
+            id="firstName"
+            placeholder="Prénom"
+            required
+          />
+          <input
+            type="text"
+            name="lastName"
+            id="lastName"
+            placeholder="Nom"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email"
+            required
+          />
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Mot de passe"
+            required
+          />
+          <textarea
+            name="description"
+            cols="30"
+            rows="10"
+            id="description"
+            placeholder="Décrivez-vous en quelques lignes"
+            required
+          ></textarea>
+          <input type="submit" value="Envoyer le formulaire" />
+        </form>
+      </div>
+    </div>
+    <!-- </div> -->
+  </body>
+</html>
