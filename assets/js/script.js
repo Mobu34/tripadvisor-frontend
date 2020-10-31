@@ -34,7 +34,10 @@ $.addEventListener("DOMContentLoaded", () => {
         description,
       };
 
-      const response = await axios.post("http://localhost:3000/form", data);
+      const response = await axios.post(
+        "https://tripadvisor-backend.herokuapp.com/form",
+        data
+      );
 
       if (response.status === 200) {
         alert("Un mail de confirmation vous a été adressé.");
