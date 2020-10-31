@@ -12,7 +12,7 @@ $.addEventListener("DOMContentLoaded", () => {
   // ferme le formulaire d'inscription
   $.querySelector(".close-modal").addEventListener("click", () => {
     $.querySelector(".modal").classList.remove("show-modal");
-    $.body.classList.remove("stop-scrolling").add("scrolling");
+    $.body.classList.remove("stop-scrolling");
   });
 
   // soumission du formulaire
@@ -39,10 +39,11 @@ $.addEventListener("DOMContentLoaded", () => {
         data
       );
 
+      console.log("status = ", response.status);
       if (response.status === 200) {
         alert("Un mail de confirmation vous a été adressé.");
         $.querySelector(".modal").classList.remove("show-modal");
-        $.body.classList.remove("stop-scrolling").add("scrolling");
+        $.body.classList.remove("stop-scrolling");
       } else {
         console.log(response);
       }
